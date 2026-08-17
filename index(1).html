@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#131921" />
+  <title>Avento | Groceries, Home Essentials, Food Delivery &amp; Home Services in Bangalore</title>
+  <meta name="description" content="Avento — order groceries, home essentials, kitchen supplies, food delivery and home services across Bangalore. Fast delivery, UPI payments, and local sellers." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ TOP HEADER ============ -->
+  <header class="navbar">
+    <a href="#" class="nav-logo">avent<em>o</em></a>
+
+    <button class="nav-deliver" type="button">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <span class="nav-deliver-text">
+        <small>Deliver to</small>
+        <strong>Bengaluru 560001</strong>
+      </span>
+    </button>
+
+    <form class="nav-search" id="searchForm">
+      <select class="search-select" aria-label="Search category">
+        <option>All</option>
+        <option>Home Essentials</option>
+        <option>Kitchen &amp; Storage</option>
+        <option>Groceries</option>
+        <option>Food Delivery</option>
+        <option>Home Services</option>
+      </select>
+      <input type="text" class="search-input" placeholder="Search Avento" aria-label="Search" />
+      <button type="submit" class="search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </form>
+
+    <button class="nav-lang" type="button">
+      <span class="flag">🇮🇳</span> EN
+    </button>
+
+    <button class="nav-account" type="button">
+      <small>Hello, sign in</small>
+      <strong>Account &amp; Lists ▾</strong>
+    </button>
+
+    <button class="nav-orders" type="button">
+      <small>Returns</small>
+      <strong>&amp; Orders</strong>
+    </button>
+
+    <button class="nav-cart" id="cartBtn" type="button">
+      <span class="cart-icon-wrap">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </span>
+      <strong>Cart</strong>
+    </button>
+  </header>
+
+  <!-- ============ SUB NAV ============ -->
+  <nav class="subnav">
+    <button class="all-menu" id="hamburgerBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      All
+    </button>
+    <a href="#deals">Today's Deals</a>
+    <a href="#bangalore-coverage">Delivery Areas</a>
+    <a href="#become-seller">Become a Seller</a>
+    <a href="#" class="subnav-extra">Groceries</a>
+    <a href="#" class="subnav-extra">Food Delivery</a>
+    <a href="#" class="subnav-extra">Home Services</a>
+    <a href="#" class="subnav-extra">Kitchen &amp; Storage</a>
+  </nav>
+
+  <!-- Slide-in category menu -->
+  <div class="side-menu" id="sideMenu">
+    <div class="side-menu-header">
+      <span>Hello, sign in</span>
+      <button id="closeSideMenu" aria-label="Close menu" type="button">✕</button>
+    </div>
+    <div class="side-menu-section">
+      <h3>Shop by Category</h3>
+      <a href="#">Home Essentials</a>
+      <a href="#">Kitchen &amp; Storage</a>
+      <a href="#">Groceries</a>
+      <a href="#">Food Delivery</a>
+      <a href="#">Home Services</a>
+    </div>
+    <div class="side-menu-section">
+      <h3>Avento</h3>
+      <a href="#become-seller">Become a Seller</a>
+      <a href="#bangalore-coverage">Delivery Areas</a>
+      <a href="#upi-payments">Payment Options</a>
+    </div>
+    <div class="side-menu-section">
+      <h3>Help &amp; Settings</h3>
+      <a href="#">Your Account</a>
+      <a href="#">Customer Service</a>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <img id="heroImg" src="https://picsum.photos/seed/avento-hero1/1500/500" alt="Groceries and home essentials delivered across Bangalore" />
+      <div class="hero-fade"></div>
+      <div class="hero-dots" id="heroDots">
+        <button class="dot active" data-i="0" aria-label="Slide 1"></button>
+        <button class="dot" data-i="1" aria-label="Slide 2"></button>
+        <button class="dot" data-i="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="hero-cards">
+        <div class="hero-card">
+          <h3>Home Essentials</h3>
+          <img src="https://picsum.photos/seed/avento-home1/200/150" alt="Storage baskets" />
+          <img src="https://picsum.photos/seed/avento-home2/200/150" alt="Cleaning supplies" />
+          <img src="https://picsum.photos/seed/avento-home3/200/150" alt="Bedsheets and linen" />
+          <img src="https://picsum.photos/seed/avento-home4/200/150" alt="Doormats and organizers" />
+          <a href="#">Shop home essentials</a>
+        </div>
+        <div class="hero-card">
+          <h3>Kitchen &amp; Storage</h3>
+          <img src="https://picsum.photos/seed/avento-kitchen1/200/150" alt="Cookware set" />
+          <img src="https://picsum.photos/seed/avento-kitchen2/200/150" alt="Airtight containers" />
+          <img src="https://picsum.photos/seed/avento-kitchen3/200/150" alt="Kitchen organizers" />
+          <img src="https://picsum.photos/seed/avento-kitchen4/200/150" alt="Lunch boxes and bottles" />
+          <a href="#">Shop kitchen &amp; storage</a>
+        </div>
+        <div class="hero-card">
+          <h3>Groceries</h3>
+          <img src="https://picsum.photos/seed/avento-grocery1/200/150" alt="Rice and grains" />
+          <img src="https://picsum.photos/seed/avento-grocery2/200/150" alt="Fresh vegetables" />
+          <img src="https://picsum.photos/seed/avento-grocery3/200/150" alt="Cooking oils and staples" />
+          <img src="https://picsum.photos/seed/avento-grocery4/200/150" alt="Snacks and beverages" />
+          <a href="#">Shop groceries</a>
+        </div>
+        <div class="hero-card">
+          <h3>Food Delivery</h3>
+          <img src="https://picsum.photos/seed/avento-food1/200/150" alt="South Indian meals" />
+          <img src="https://picsum.photos/seed/avento-food2/200/150" alt="Local restaurant favourites" />
+          <img src="https://picsum.photos/seed/avento-food3/200/150" alt="Combo meals" />
+          <img src="https://picsum.photos/seed/avento-food4/200/150" alt="Desserts and beverages" />
+          <a href="#">Explore food delivery</a>
+        </div>
+        <div class="hero-card">
+          <h3>Home Services</h3>
+          <img src="https://picsum.photos/seed/avento-services1/200/150" alt="Home cleaning" />
+          <img src="https://picsum.photos/seed/avento-services2/200/150" alt="Appliance repair" />
+          <img src="https://picsum.photos/seed/avento-services3/200/150" alt="Plumbing and electrical" />
+          <img src="https://picsum.photos/seed/avento-services4/200/150" alt="Salon at home" />
+          <a href="#">Book a service</a>
+        </div>
+        <div class="hero-card hero-card-signin">
+          <h3>Sign in for the best experience</h3>
+          <button class="btn-yellow" type="button">Sign in securely</button>
+          <p>New customer? <a href="#">Start here.</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANGALORE DELIVERY COVERAGE ============ -->
+    <section class="section-block" id="bangalore-coverage">
+      <div class="section-head">
+        <h2>We deliver across Bangalore</h2>
+        <span class="coverage-eta">Most areas: 30–90 min delivery</span>
+      </div>
+      <div class="coverage-grid">
+        <span class="coverage-area">Koramangala</span>
+        <span class="coverage-area">Indiranagar</span>
+        <span class="coverage-area">HSR Layout</span>
+        <span class="coverage-area">Whitefield</span>
+        <span class="coverage-area">Jayanagar</span>
+        <span class="coverage-area">Electronic City</span>
+        <span class="coverage-area">Marathahalli</span>
+        <span class="coverage-area">JP Nagar</span>
+        <span class="coverage-area">BTM Layout</span>
+        <span class="coverage-area">Yelahanka</span>
+        <span class="coverage-area">Hebbal</span>
+        <span class="coverage-area">Bannerghatta Road</span>
+      </div>
+      <p class="coverage-note">Don't see your area? <a href="#">Check full coverage &amp; delivery times &rsaquo;</a></p>
+    </section>
+
+    <!-- ============ DEALS ============ -->
+    <section class="section-block" id="deals">
+      <div class="section-head">
+        <h2>Today's Deals</h2>
+        <a href="#">See all deals &rsaquo;</a>
+      </div>
+      <div class="scroll-row" id="dealsRow"></div>
+    </section>
+
+    <!-- ============ RECOMMENDED GRID ============ -->
+    <section class="section-block">
+      <div class="section-head">
+        <h2>Recommended for you</h2>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- ============ BECOME A SELLER ============ -->
+    <section class="seller-cta" id="become-seller">
+      <div class="seller-cta-inner">
+        <div class="seller-cta-text">
+          <h2>Sell on Avento</h2>
+          <p>Reach thousands of customers across Bangalore. List groceries, home essentials, kitchen products or offer your services — we handle delivery, payments and support.</p>
+        </div>
+        <a href="#" class="btn-yellow seller-cta-btn">Become a Seller</a>
+      </div>
+    </section>
+
+    <!-- ============ PROMO BANNER ============ -->
+    <section class="promo-banner">
+      <img src="https://picsum.photos/seed/avento-promo/1500/300" alt="Promotional sale banner" />
+      <div class="promo-text">
+        <h2>Big Savings Week</h2>
+        <p>Up to 60% off groceries, kitchen essentials &amp; home services</p>
+        <a href="#deals" class="btn-yellow">Shop the sale</a>
+      </div>
+    </section>
+
+    <!-- ============ MORE PRODUCTS ============ -->
+    <section class="section-block">
+      <div class="section-head">
+        <h2>Top picks in Groceries</h2>
+      </div>
+      <div class="product-grid" id="productGrid2"></div>
+    </section>
+
+    <!-- ============ UPI PAYMENTS ============ -->
+    <section class="upi-section" id="upi-payments">
+      <div class="upi-inner">
+        <div class="upi-text">
+          <h2>Pay easily with UPI</h2>
+          <p>100% secure payments via UPI, cards, net banking or Cash on Delivery.</p>
+        </div>
+        <div class="upi-badges">
+          <span class="upi-badge">Google Pay</span>
+          <span class="upi-badge">PhonePe</span>
+          <span class="upi-badge">Paytm</span>
+          <span class="upi-badge">BHIM UPI</span>
+          <span class="upi-badge">Cash on Delivery</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <button class="back-to-top" id="backToTop" type="button">Back to top</button>
+    <div class="footer-main">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <a href="#">About Avento</a>
+        <a href="#">Careers</a>
+        <a href="#">Press Releases</a>
+        <a href="#">Avento Cares</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect with Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter/X</a>
+        <a href="#">Instagram</a>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <a href="#become-seller">Become a Seller</a>
+        <a href="#">Deliver with Avento</a>
+        <a href="#">Advertise Your Products</a>
+        <a href="#">Offer a Home Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <a href="#">Your Account</a>
+        <a href="#">Returns Centre</a>
+        <a href="#upi-payments">Payment Options</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+    <hr />
+    <div class="footer-bottom">
+      <a href="#" class="footer-logo">avent<em>o</em></a>
+      <div class="footer-selectors">
+        <button type="button">🌐 English</button>
+        <button type="button">🇮🇳 India</button>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Conditions of Use</a>
+      <a href="#">Privacy Notice</a>
+      <a href="#">Your Ads Privacy Choices</a>
+    </div>
+    <p class="copyright">&copy; 2026 Avento. Demo project for learning purposes — not affiliated with any real retailer.</p>
+  </footer>
+
+  <!-- ============ WHATSAPP ORDER BUTTON ============ -->
+  <!-- Replace the phone number below (91XXXXXXXXXX) with your real WhatsApp Business number -->
+  <a
+    href="https://wa.me/91XXXXXXXXXX?text=Hi%20Avento%2C%20I%27d%20like%20to%20place%20an%20order"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Order on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.1 3a8.9 8.9 0 0 0-7.7 13.4L3 21l4.7-1.3a8.9 8.9 0 0 0 4.4 1.2 8.9 8.9 0 0 0 8.9-9 8.9 8.9 0 0 0-2.4-6.3zm-5.5 13.6a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.8.7.8-2.7-.2-.3a7.4 7.4 0 1 1 6.3 3.5zm4-5.5c-.2-.1-1.3-.6-1.5-.7-.2-.1-.3-.1-.5.1s-.6.7-.8.9-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.8 6.8 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4c-.1-.1-.5-1.2-.7-1.7-.2-.4-.4-.4-.5-.4h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 2 4.6 4.6 0 0 0 1 2.4 10.4 10.4 0 0 0 4 3.5c.6.2 1 .4 1.4.5.6.2 1.1.1 1.5.1.5-.1 1.3-.5 1.5-1s.2-.9.1-1c0-.1-.2-.2-.4-.3z"/></svg>
+    <span class="wa-label">Order on WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
