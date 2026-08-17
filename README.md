@@ -1,4 +1,4 @@
-# Avento — Bangalore Groceries, Home Essentials &amp; Services (Demo)
+# Aventuo — Bangalore Groceries, Home Essentials &amp; Services (Demo)
 
 A static front-end e-commerce homepage for a hyperlocal Bangalore platform — groceries, home essentials, kitchen &amp; storage, food delivery and home services — built with plain HTML, CSS, and JavaScript. No frameworks, no build step. Layout and UX patterns are inspired by Amazon's homepage; branding and category focus are original.
 
@@ -34,4 +34,4 @@ Just open `index.html` in a browser. No server or install required.
 - Product photos are pulled live from Lorem Picsum (`picsum.photos`) placeholders and are randomly assigned, not actually category-matched — swap any `src` for real product photography before launch.
 
 ## Note on branding
-This uses original branding ("Avento") and placeholder imagery rather than any real company's logo or product photos, since those are trademarked/copyrighted. The layout, color palette, and UX patterns are intentionally close to familiar e-commerce apps for learning/portfolio purposes. Not affiliated with Amazon or any real retailer, delivery, or payment platform. The UPI app names shown are for illustration only — no real payment integration is wired up.
+This uses original branding ("Aventuo") and placeholder imagery rather than any real company's logo or product photos, since those are trademarked/copyrighted. The layout, color palette, and UX patterns are intentionally close to familiar e-commerce apps for learning/portfolio purposes. Not affiliated with Amazon or any real retailer, delivery, or payment platform. The UPI app names shown are for illustration only — no real payment integration is wired up.
